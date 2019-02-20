@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from music.api import save_blob
+from music import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/save-blob', save_blob.SaveBlob.as_view(), name='save-blob'),
+    path('home/', views.index, name='home'),
 ]
+
