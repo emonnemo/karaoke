@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+  {% load static %}
+  <script src="{% static 'app.js' %}"></script>   
+  <title>Site</title>
+</head>
+<body>
+<img src="{% static 'img.png' %}" alt="Mon image" />
+  {% block content %}{% endblock %}
+</body>
+</html>
+
