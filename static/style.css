@@ -1,0 +1,39 @@
+.song-list-table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.song-list-table tbody {
+    display: block;
+    height: 400px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+#search-list-body {
+    height: auto;
+    max-height: 200px;
+}
+
+.song-list-table th:first-child,
+.song-list-table td:first-child {
+    width: 40px;
+    text-align: center;
+}
+
+.song-list-table thead, tr {
+    display: block;
+    border: 1px solid #dddddd;
+    text-align: left;
+    height: 25px;
+    line-height: 25px;
+}
+
+tr:nth-child(even) {
+    background-color: #F0F8FF;
+}
+
+.player {
+    margin-top: 10px;
+}

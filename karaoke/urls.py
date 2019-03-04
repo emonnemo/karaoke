@@ -18,12 +18,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from music.api import save_blob
+from music.api import song_list
+from music.api import recognize
 from music import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/save-blob', save_blob.SaveBlob.as_view(), name='save-blob'),
+    path('api/recognize', recognize.Recognize.as_view(), name='recognize'),
+    path('api/songs', song_list.SongView.as_view(), name='get-songs-list'),
     path('home/', views.index, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

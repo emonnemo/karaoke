@@ -25,7 +25,7 @@ SECRET_KEY = '&j9i+d^-&m3)t3yk6u6y=_wet*j1a(vv)on!fk3q_pgfq7guw#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'sslserver',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +124,7 @@ USE_TZ = True
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'js'),
+    os.path.join(BASE_DIR, 'songs'),
 )
 
 STATIC_URL = '/static/'
@@ -133,4 +136,15 @@ TEMPLATE_DIRS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'recordings')
+
+# Load the songs list
+SONGS_LIST = []
+list_file = open(os.environ.get('SONGS_LIST'), 'r')
+for line in list_file.readlines():
+    SONGS_LIST.append(line.strip())
+
+# OTHER APIS
+MEDIA_API = 'http://10.181.131.37:8003'
+SONG_ASR_API = 'http://43.245.191.195:6547'
+NUMBER_ASR_API = 'http://43.245.191.195:6547'
 

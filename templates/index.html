@@ -8,20 +8,66 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
   </head>
   <body>
-  	<h1>Automatic Speech Recognition for music player</h1> 
+  	<h1>Automatic Speech Recognition for music player</h1>
 	<div id="controls">
-        <input type="text" id ="songResult" value="{{ song }}" disabled></input>
+        <!-- <input type="text" id ="songResult" value="{{ song }}" disabled></input> -->
 		<button id="recordButton">Record</button>
-		<button id="stopButton" disabled>Stop</button>
 	</div>
-  
+    <br>
+    <div id="search-result">
+        Daftar Hasil Pencarian
+        <table class="song-list-table">
+            <thead>
+                <tr>
+                    <th> No </th>
+                    <th> Judul Lagu </th>
+                </tr>
+            </thead>
+            <tbody id="search-list-body">
+                <!--
+                {% for song in songs_list %}
+                <tr>
+                    <td> {{ forloop.counter }} </td>
+                    <td> {{ song }} </td>
+                </tr>
+                {% endfor %}
+                -->
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="song-list">
+        Daftar Judul Lagu
+        <table class="song-list-table">
+            <thead>
+                <tr>
+                    <th> No </th>
+                    <th> Judul Lagu </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for song in songs_list %}
+                <tr>
+                    <td> {{ forloop.counter }} </td>
+                    <td> {{ song }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="player">
+        <!-- <audio id="audio-wave" src="{% static 'asd.wav' %}" controls></audio> -->
+        {% include "music.html" %}
+    </div>
   	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
 	<!-- <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     {% load static %}
     <script type="text/javascript" src="{% static 'app.js' %}"></script>
     {% load static %}
     <script type="text/javascript" src="{% static 'WebAudioRecorder.min.js' %}"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    {% load static %}
+    <script type="text/javascript" src="{% static 'music.js' %}"></script>
 
   </body>
 </html>
