@@ -184,9 +184,3 @@ function playSongNumber(number) {
     apiType = 'song';
 }
 
-function playSong(song) {
-    audio = document.getElementById('audio-wave');
-    console.log(audio.src);
-    audio.src = '/static/' + song + '.wav';
-    audio.play();
-}
