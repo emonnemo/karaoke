@@ -34,7 +34,19 @@ def search_keyword(keyword):
     return results
 
 
-class Recognize(APIView):
+class SearchKeywordView(APIView):
+
+    def post(self, request):
+        keyword = request.data.get('keyword')
+        response = {
+            'keyword': keyword,
+            'results': search_keyword(keyword),
+            'status': 'ok',
+        }
+        return Response(response)
+
+
+class SearchASRView(APIView):
 
     def post(self, request):
         prefix = 'recording'

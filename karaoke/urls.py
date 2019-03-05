@@ -19,12 +19,13 @@ from django.contrib import admin
 from django.urls import path
 
 from music.api import song_list
-from music.api import recognize
+from music.api import search
 from music import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/recognize', recognize.Recognize.as_view(), name='recognize'),
+    path('api/search-asr', search.SearchASRView.as_view(), name='search-asr'),
+    path('api/search-keyword', search.SearchKeywordView.as_view(), name='search-keyword'),
     path('api/songs', song_list.SongView.as_view(), name='get-songs-list'),
     path('home/', views.index, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

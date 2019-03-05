@@ -33,6 +33,7 @@ function record() {
 
 function startRecording() {
 	console.log("startRecording() called");
+    recordButton.textContent = "Stop";
 
 	/*
 		Simple constraints object, for more advanced features see
@@ -96,6 +97,7 @@ function startRecording() {
 
 function stopRecording() {
 	console.log("stopRecording() called");
+    recordButton.textContent = "Record";
 	
 	//stop microphone access
 	gumStream.getAudioTracks()[0].stop();
@@ -118,7 +120,7 @@ function recognizeSound(blob, encoding){
         fd.append('blob', event.target.result);
         $.ajax({
             type: 'POST',
-            url: '/api/recognize',
+            url: '/api/search-asr',
             data: fd,
             processData: false,
             contentType: false
