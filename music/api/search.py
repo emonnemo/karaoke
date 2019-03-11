@@ -62,12 +62,14 @@ class SearchASRView(APIView):
         file_path = '%s/%s' % (settings.MEDIA_API, filename)
         if request.data.get('api_type') == 'song':
             api = '%s/asr_upload' % settings.SONG_ASR_API
+            keyword = ''
             try:
                 r = requests.get(api, params={'wav_addr': file_path})
+                print (r.url)
                 keyword = r.json().get('words')
             except:
-                keyword = ''
-            if keyword.strip() == '':
+                pass
+            if keyword == None or keyword.strip() == '':
                 results = []
             else:
                 results = search_keyword(keyword)
@@ -78,7 +80,13 @@ class SearchASRView(APIView):
             }
         elif request.data.get('api_type') == 'number':
             api = '%s/asr_upload' % settings.NUMBER_ASR_API
-            number = 1 # no api yet
+            try:
+                r = requests.get(api, params={'wav_addr': file_path})
+                print (r.url)
+                print (r.json())
+                number = int(r.json().get('words'))
+            except:
+                return Response({'number': 1, 'status': 'error'})
             response = {
                 'number': number,
                 'status': 'ok',

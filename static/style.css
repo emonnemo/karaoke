@@ -1,12 +1,14 @@
 .song-list-table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .song-list-table tbody {
     display: block;
-    height: 400px;
+    max-height: 270px;
     overflow-y: auto;
     width: 100%;
 }
@@ -14,6 +16,7 @@
 #search-list-body {
     height: auto;
     max-height: 200px;
+    overflow-y: auto;
 }
 
 .song-list-table th:first-child,
@@ -30,10 +33,127 @@
     line-height: 25px;
 }
 
+.song-list-table thead {
+    background-color: #add8e6;
+}
+
+.song-list-title {
+    text-align: center;
+    margin-top: 5px;
+}
+
 tr:nth-child(even) {
     background-color: #F0F8FF;
 }
 
 .player {
     margin-top: 10px;
+    bottom: 0;
+    width: 100%;
+    /*position: fixed;*/
+}
+
+.image-container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content {
+    max-height: 500px;
+}
+
+.title {
+    text-align: center;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+}
+
+.footer {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-style: italic;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #0B5695, #0194A6);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.center {
+    text-align: center;
+    display: inline-block;
+}
+
+.search-keyword-input {
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.search-control-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.search-control-table tr, td{
+    border: none;
+    border-collapse: collapse;
+}
+
+.search-control-table td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.song-list-table, .player {
+    text-transform: capitalize;
+}
+
+.top-title {
+    min-width: 100%;
+    background-image: linear-gradient(to right,#0B5695,#0194A6);
+}
+
+.top-title .image-container {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    margin-left: 200%;
+    height: 56px;
+    width: auto;
 }

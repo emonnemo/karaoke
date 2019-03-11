@@ -8,56 +8,71 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
   </head>
   <body>
-  	<h1>Automatic Speech Recognition for music player</h1>
-	<div id="controls">
-        <!-- <input type="text" id ="songResult" value="{{ song }}" disabled></input> -->
-		<button id="recordButton">Record</button>
-	</div>
-    <br>
-    <div id="search-result">
-        Daftar Hasil Pencarian
-        <table class="song-list-table">
-            <thead>
-                <tr>
-                    <th> No </th>
-                    <th> Judul Lagu </th>
-                </tr>
-            </thead>
-            <tbody id="search-list-body">
-                <!--
-                {% for song in songs_list %}
-                <tr>
-                    <td> {{ forloop.counter }} </td>
-                    <td> {{ song }} </td>
-                </tr>
-                {% endfor %}
-                -->
-            </tbody>
-        </table>
-    </div>
-    <br>
-    <div class="song-list">
-        Daftar Judul Lagu
-        <table class="song-list-table">
-            <thead>
-                <tr>
-                    <th> No </th>
-                    <th> Judul Lagu </th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for song in songs_list %}
-                <tr>
-                    <td> {{ forloop.counter }} </td>
-                    <td> {{ song }} </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <div class="top-title center">
+        <div class="image-container logo">
+            <img src="/static/prosa.svg"></img>
+        </div>
+        <h1 class="title">Pemutar Musik</h1>
     </div>
     <div class="player">
         <!-- <audio id="audio-wave" src="{% static 'asd.wav' %}" controls></audio> -->
         {% include "music.html" %}
+    </div>
+    <div class="search-control-container center">
+    	<div class="search-control-container center" id="searchControl">
+            <table cellspacing="0" cellpadding="0" class="search-control-table center">
+                <tr>
+                    <td><div id="helperText">Cari Lagu</div></td>
+                    <td>
+                        <div>
+                            <input type="text" id="searchKeyword" class="search-keyword-input" onkeyup="filterSong()" size=35></input>
+                        </div>
+                    </td>
+                    <td width="40px">
+                        <div class="image-container tooltip">
+        		            <img id="recordButton" src="/static/record.png">
+                            </img>
+                            <span class="tooltip-text" id="tooltipText">Tekan tombol untuk memulai merekam</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+    	</div>
+    </div>
+    <div class="content">
+        <!--<div id="search-result">
+            Daftar Hasil Pencarian
+            <table class="song-list-table">
+                <thead>
+                    <tr>
+                        <th> No </th>
+                        <th> Judul Lagu </th>
+                    </tr>
+                </thead>
+                <tbody id="search-list-body">
+                </tbody>
+            </table>
+        </div>-->
+        <div class="song-list">
+            <h2 class="song-list-title" id="songListTitle">Daftar Judul Lagu</h2>
+            <table class="song-list-table" id="songTable">
+                <thead>
+                    <tr>
+                        <th> No </th>
+                        <th> Judul Lagu </th>
+                    </tr>
+                </thead>
+                <tbody id="song-list-body">
+                    {% for song in songs_list %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ song }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">© Copyright Prosa.ai</div>
     </div>
   	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
 	<!-- <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script> -->

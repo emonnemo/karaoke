@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 592.99998 271.49"
+   version="1.1"
+   id="svg38"
+   sodipodi:docname="logo-white.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="D:\Prosa\prosa-landing-page\src\assets\Asset 3.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   width="593"
+   height="271.48999">
+  <metadata
+     id="metadata42">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Asset 3</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
+     id="namedview40"
+     showgrid="false"
+     inkscape:zoom="0.86927698"
+     inkscape:cx="98.168808"
+     inkscape:cy="95.954119"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg38" />
+  <defs
+     id="defs28">
+    <style
+       id="style2">.cls-1{fill:url(#radial-gradient);}.cls-2{fill:url(#linear-gradient);}.cls-3{fill:url(#linear-gradient-2);}.cls-4{fill:url(#linear-gradient-3);}</style>
+    <radialGradient
+       id="radial-gradient"
+       cx="102.56"
+       cy="32.889999"
+       r="356.63"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#ededed"
+         id="stop4"
+         style="stop-color:#7cdba4;stop-opacity:1" />
+      <stop
+         offset="0.03"
+         stop-color="#ededed"
+         id="stop6"
+         style="stop-color:#7fdea6;stop-opacity:1" />
+      <stop
+         offset="1"
+         stop-color="#f6f6f6"
+         id="stop8"
+         style="stop-color:#377d6a;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient
+       id="linear-gradient"
+       x1="283.29001"
+       y1="5.0999999"
+       x2="6.0799999"
+       y2="212.89999"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#80e0a7"
+         id="stop11"
+         style="stop-color:#7edea6;stop-opacity:1" />
+      <stop
+         offset="0.03"
+         stop-color="#dadada"
+         id="stop13"
+         style="stop-color:#76d29e;stop-opacity:1" />
+      <stop
+         offset="1"
+         stop-color="#9d9d9c"
+         id="stop15"
+         style="stop-color:#4c9a7c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="252.56"
+       y1="80.57"
+       x2="87.089996"
+       y2="147.39"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#c6c6c6"
+         id="stop18"
+         style="stop-color:#74d09d;stop-opacity:1" />
+      <stop
+         offset="1"
+         stop-color="#878787"
+         id="stop20"
+         style="stop-color:#357c69;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-3"
+       x1="45.310001"
+       y1="136.41"
+       x2="79.349998"
+       y2="223.89"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#f6f6f6"
+         id="stop23"
+         style="stop-color:#80e0a7;stop-opacity:1" />
+      <stop
+         offset="1"
+         stop-color="#9d9d9c"
+         id="stop25"
+         style="stop-color:#347a68;stop-opacity:1" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath82">
+      <rect
+         y="-20.706863"
+         x="-515.37085"
+         height="280.69305"
+         width="197.86559"
+         id="rect84"
+         style="fill:#d1e0e2;fill-opacity:1;stroke-width:0.92275953" />
+    </clipPath>
+  </defs>
+  <title
+     id="title30">Asset 3</title>
+  <g
+     id="g53"
+     transform="translate(0.20892362,0.00250145)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#radial-gradient)"
+       d="M 200.6,71 A 71,71 0 0 0 142.27,1.12 v 0 A 71.37,71.37 0 0 0 129.64,0 c -2.32,0 -4.61,0.12 -6.88,0.34 -15.1,1.29 -27.25,7.09 -47.33,13.23 -3.53,1.08 -32.07,7.71 -50.59,6.49 A 47.44,47.44 0 0 1 16.54,18.8 13.38,13.38 0 0 0 0,31.68 q 0,0.1 0,0.2 c 0,9.29 1.8,18.64 7.44,25.19 7.11,8.26 18.76,12.18 30.63,11.63 h 0.14 c 9.79,0.53 58.18,-14.61 78,-16.05 14.29,-1 26.06,11.48 26.06,25.65 0,10.71 -6.83,19.5 -16.14,23.72 -9.31,4.22 -29.19,10.85 -29.19,10.85 l -8.84,5.25 -40.57,24.7 A 13.48,13.48 0 0 0 41.7,152 l -3.11,20.2 a 13.48,13.48 0 0 0 0.12,4.79 l 1.4,6.76 a 13.51,13.51 0 0 1 0.26,3.42 c -0.21,4.13 -0.57,13.88 0.92,7.35 1.87,-8.15 13.38,-13.18 16.52,-14.84 29.82,-15.85 95.06,-41.64 100.34,-43.72 l 0.68,-0.29 A 71,71 0 0 0 200.6,71 Z"
+       class="cls-1"
+       id="main" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#linear-gradient)"
+       d="m 39.36,196.33 a 5.21,5.21 0 0 0 0.8,-1.69 c 1.86,-8.13 13.27,-12.9 16.4,-14.56 31,-16.5 100.5,-43.77 100.5,-43.77 a 70.84,70.84 0 0 0 42,-64.72 c 0,-6 -1.57,-18.81 -5.5,-27.4 -1.59,78.44 -96.44,68.66 -96.44,68.66 l -55.91,34.93 -2.79,18.1 z"
+       class="cls-2"
+       data-name="grad 2"
+       id="grad_2" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#linear-gradient-2)"
+       d="m 97.08,112.89 -13.16,7.36 -22.5,13.33 -22.64,44.42 1.55,7.47 c 0,0 -1,17.16 0.83,9 1.83,-8.16 13.36,-13.15 16.49,-14.82 31,-16.5 74.94,-34.06 100.5,-43.77 18.68,-7.1 32.43,-23.77 38.62,-43 -37.32,52.03 -99.69,20.01 -99.69,20.01 z"
+       class="cls-3"
+       data-name="grad 1"
+       id="grad_1" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#linear-gradient-3)"
+       d="M 91.6,97.58 C 99.23,89.58 90.46,76.75 80.22,80.95 53.65,91.87 23.86,113.33 11.53,155.46 -2.09,202 10.06,237.25 41.6,268.12 c 8.93,8.74 23.44,-1 18.86,-12.6 -9.8,-24.83 -14.76,-57.88 -3,-98.18 A 144.66,144.66 0 0 1 91.6,97.58 Z"
+       class="cls-4"
+       id="kaki" />
+    <g
+       aria-label="Prosa.ai"
+       transform="matrix(2.6275183,0,0,2.6275183,-452.09798,-53.478962)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       id="flowRoot28">
+      <path
+         d="m 272.94633,81.538984 h -4.48 v 7.92 h -5.52 v -27.2 h 10 q 9.68,0 9.68,9.44 0,4.76 -2.48,7.32 -2.44,2.52 -7.2,2.52 z m -4.48,-4.72 h 4.44 q 4.12,0 4.12,-5.12 0,-2.52 -1,-3.6 -1,-1.12 -3.12,-1.12 h -4.44 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';fill:#ffffff"
+         id="path33" />
+      <path
+         d="m 286.06008,89.458984 v -20 h 5.32 v 2.12 q 3.36,-2 6.4,-2.6 v 5.4 q -3.24,0.68 -5.56,1.4 l -0.8,0.28 v 13.4 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';fill:#ffffff"
+         id="path35" />
+      <path
+         d="m 301.98383,71.738984 q 2.12,-2.76 7.08,-2.76 4.96,0 7.08,2.76 2.12,2.72 2.12,7.68 0,10.52 -9.2,10.52 -9.2,0 -9.2,-10.52 0,-4.96 2.12,-7.68 z m 4.12,12.2 q 0.84,1.44 2.96,1.44 2.12,0 2.92,-1.44 0.84,-1.44 0.84,-4.52 0,-3.08 -0.84,-4.48 -0.8,-1.4 -2.92,-1.4 -2.12,0 -2.96,1.4 -0.8,1.4 -0.8,4.48 0,3.08 0.8,4.52 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';fill:#ffffff"
+         id="path37" />
+      <path
+         d="m 336.51383,74.458984 q -4.96,-0.64 -6.96,-0.64 -1.96,0 -2.56,0.36 -0.56,0.36 -0.56,1.16 0,0.76 0.76,1.08 0.8,0.28 4,0.88 3.24,0.56 4.6,1.88 1.36,1.32 1.36,4.28 0,6.48 -8.04,6.48 -2.64,0 -6.4,-0.72 l -1.28,-0.24 0.16,-4.48 q 4.96,0.64 6.88,0.64 1.96,0 2.64,-0.36 0.72,-0.4 0.72,-1.16 0,-0.76 -0.76,-1.12 -0.72,-0.36 -3.84,-0.88 -3.08,-0.52 -4.6,-1.76 -1.52,-1.24 -1.52,-4.4 0,-3.2 2.16,-4.8 2.16,-1.64 5.56,-1.64 2.36,0 6.44,0.76 l 1.32,0.24 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';fill:#ffffff"
+         id="path39" />
+      <path
+         d="m 356.38008,75.698984 v 8.32 q 0.08,0.96 0.32,1.36 0.24,0.36 1,0.52 l -0.16,4.04 q -2.04,0 -3.28,-0.28 -1.2,-0.28 -2.44,-1.12 -2.88,1.4 -5.88,1.4 -6.2,0 -6.2,-6.56 0,-3.2 1.72,-4.52 1.72,-1.36 5.28,-1.6 l 4.28,-0.32 v -1.24 q 0,-1.24 -0.56,-1.68 -0.56,-0.48 -1.8,-0.48 l -7.52,0.32 -0.16,-3.72 q 4.28,-1.16 8.12,-1.16 3.88,0 5.56,1.6 1.72,1.6 1.72,5.12 z m -9,5.28 q -2.24,0.2 -2.24,2.4 0,2.2 1.96,2.2 1.52,0 3.32,-0.48 l 0.6,-0.16 v -4.28 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';fill:#ffffff"
+         id="path41" />
+      <path
+         d="m 361.28883,89.458984 v -6.64 h 5.76 v 6.64 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';fill:#ffffff"
+         id="path43" />
+      <path
+         d="m 387.0832,75.698984 v 8.32 q 0.08,0.96 0.32,1.36 0.24,0.36 1,0.52 l -0.16,4.04 q -2.04,0 -3.28,-0.28 -1.2,-0.28 -2.44,-1.12 -2.88,1.4 -5.88,1.4 -6.2,0 -6.2,-6.56 0,-3.2 1.72,-4.52 1.72,-1.36 5.28,-1.6 l 4.28,-0.32 v -1.24 q 0,-1.24 -0.56,-1.68 -0.56,-0.48 -1.8,-0.48 l -7.52,0.32 -0.16,-3.72 q 4.28,-1.16 8.12,-1.16 3.88,0 5.56,1.6 1.72,1.6 1.72,5.12 z m -9,5.28 q -2.24,0.2 -2.24,2.4 0,2.2 1.96,2.2 1.52,0 3.32,-0.48 l 0.6,-0.16 v -4.28 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';fill:#ffffff"
+         id="path45" />
+      <path
+         d="m 392.23195,89.458984 v -20 h 5.36 v 20 z m 0,-22.56 v -5.44 h 5.36 v 5.44 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';fill:#ffffff"
+         id="path47" />
+    </g>
+  </g>
+</svg>

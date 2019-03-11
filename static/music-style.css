@@ -34,6 +34,9 @@ section {
   display: flex;
   box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
   max-height: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%
 }
 
 .album-cover {
@@ -75,8 +78,10 @@ section {
   background: white;
   padding: 1em;
   text-align: center;
-  width: 100%;
+  width: 70%;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .music-player__title {
   margin: 0 0 0.1em 0;
@@ -155,7 +160,7 @@ section {
   .music-container {
     flex-flow: column wrap;
     max-height: inherit;
-    max-width: 270px;
+    max-width: 500px;
     margin: 0 auto;
     overflow: auto;
   }
@@ -165,7 +170,7 @@ section {
     max-width: 100%;
   }
   .music-player__title {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .music-player__author {
     font-size: 1em;

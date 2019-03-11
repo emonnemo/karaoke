@@ -199,7 +199,7 @@ function init() {
   document.getElementById(currentAudio).currentTime = 0;
 
   title.innerHTML = list[currentId].title;
-  author.innerHTML = list[currentId].author;
+  //author.innerHTML = list[currentId].author;
 
   //set current time
   audio.addEventListener("loadedmetadata", function () {
@@ -217,15 +217,13 @@ function init() {
 
 function playSong(title) {
   document.getElementById(currentAudio).pause();
-  console.log(title);
   // search through the list for id
   for (var index in list) {
-    if (list[index].title == title) {
+    if (list[index].title === title) {
       currentId = parseInt(index);
       break;
     }
   }
-  console.log(currentId);
   init();
   isPlaying = false;
   playBtn.click();

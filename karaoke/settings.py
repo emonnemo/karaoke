@@ -147,5 +147,5 @@ for line in list_file.readlines():
 # OTHER APIS
 MEDIA_API = 'http://10.181.131.37:8003'
 SONG_ASR_API = 'http://43.245.191.195:6547'
-NUMBER_ASR_API = 'http://43.245.191.195:6547'
+NUMBER_ASR_API = 'http://43.245.191.195:6548'
 
