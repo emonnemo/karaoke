@@ -142,10 +142,21 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'recordings')
 SONGS_LIST = []
 list_file = open(os.environ.get('SONGS_LIST'), 'r')
 for line in list_file.readlines():
-    SONGS_LIST.append(line.strip())
+    SONGS_LIST.append({
+        'title': line.split('-')[0].strip(),
+        'author': line.split('-')[1].strip(),
+    })
+#for i in range(40000):
+#    SONGS_LIST.append({
+#        'title': i,
+#        'author': i,
+#    })
 
 # OTHER APIS
 MEDIA_API = 'http://10.181.131.37:8003'
 SONG_ASR_API = 'http://43.245.191.195:6547'
 NUMBER_ASR_API = 'http://43.245.191.195:6548'
+
+from django.core.servers.basehttp import WSGIServer
+WSGIServer.request_queue_size = 15
 

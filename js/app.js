@@ -99,14 +99,14 @@ function startRecording() {
 		  workerDir: "js/", // must end with slash
 		  encoding: encodingType,
 		  numChannels:2, //2 is the default, mp3 encoding supports only 2
-		  onEncoderLoading: function(recorder, encoding) {
-		  },
-		  onEncoderLoaded: function(recorder, encoding) {
-		  }
+		  //onEncoderLoading: function(recorder, encoding) {
+		  //},
+		  //onEncoderLoaded: function(recorder, encoding) {
+		  //}
 		});
 
 		recorder.onComplete = function(recorder, blob) { 
-			recognizeSound(blob,recorder.encoding);
+			recognizeSound(blob, recorder.encoding);
 		}
 
 		recorder.setOptions({
@@ -205,7 +205,7 @@ function search() {
 }
 */
 
-function filterSong() {
+async function filterSong() {
     input = document.getElementById('searchKeyword');
     filter = input.value.toLowerCase();
     table = document.getElementById('songTable');
@@ -239,6 +239,7 @@ function filterSong() {
     }
 }
 
+/*
 function updateSearchResult(results) {
     songListNode = document.getElementById('song-list-body');
     trList = songListNode.getElementsByTagName('tr');
@@ -258,7 +259,7 @@ function updateSearchResult(results) {
         }
     }
 }
-
+*/
 
 /*
 function updateSearchResult(results) {
@@ -316,3 +317,8 @@ function playSongNumber(number) {
     }
 }
 
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+        record();
+    }
+});

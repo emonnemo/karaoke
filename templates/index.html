@@ -25,7 +25,7 @@
                     <td><div id="helperText">Cari Lagu</div></td>
                     <td>
                         <div>
-                            <input type="text" id="searchKeyword" class="search-keyword-input" onkeyup="filterSong()" size=35></input>
+                                <input type="text" id="searchKeyword" class="search-keyword-input" onkeyup="new Promise(() => filterSong());" size=35></input>
                         </div>
                     </td>
                     <td width="40px">
@@ -60,13 +60,15 @@
                     <tr>
                         <th> No </th>
                         <th> Judul Lagu </th>
+                        <th> Penyanyi </th>
                     </tr>
                 </thead>
                 <tbody id="song-list-body">
                     {% for song in songs_list %}
-                    <tr>
+                    <tr onclick="playSong('{{ song.title }}')")>
                         <td>{{ forloop.counter }}</td>
-                        <td>{{ song }}</td>
+                        <td>{{ song.title }}</td>
+                        <td>{{ song.author }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>

@@ -11,8 +11,9 @@ class SongView(APIView):
         for index, song in enumerate(songs_list):
             song_object = {
                 'id': index + 1,
-                'url': '/static/%s.wav' % song,
-                'title': song,
+                'url': '/static/%s - %s.wav' % (song['title'], song['author']),
+                'title': song['title'],
+                'author': song['author'],
             }
             response.append(song_object)
         return Response({'songs': response, 'status': 'ok'})

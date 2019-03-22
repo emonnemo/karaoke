@@ -25,12 +25,21 @@
     text-align: center;
 }
 
+.song-list-table th:nth-child(2),
+.song-list-table td:nth-child(2) {
+    width: 300px;
+}
+
 .song-list-table thead, tr {
     display: block;
     border: 1px solid #dddddd;
     text-align: left;
     height: 25px;
     line-height: 25px;
+}
+
+.song-list-table tr {
+    height: auto;
 }
 
 .song-list-table thead {
@@ -138,7 +147,7 @@ body {
 }
 
 .song-list-table, .player {
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 
 .top-title {
