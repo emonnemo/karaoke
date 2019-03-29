@@ -141,10 +141,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'recordings')
 # Load the songs list
 SONGS_LIST = []
 list_file = open(os.environ.get('SONGS_LIST'), 'r')
-for line in list_file.readlines():
+for line in list_file.readlines()[1:]: # First line is columns name
     SONGS_LIST.append({
-        'title': line.split('-')[0].strip(),
-        'author': line.split('-')[1].strip(),
+        'title': line.split(';')[1].strip(),
+        'author': line.split(';')[2].strip()[:-3], # Remove ',,,'
     })
 #for i in range(40000):
 #    SONGS_LIST.append({

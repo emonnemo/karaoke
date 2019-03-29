@@ -10,7 +10,8 @@ var encodeAfterRecord = true;       // when to encode
 // apiType
 // 'song' to call song ASR
 // 'number' to call number ASR
-var apiType = 'song';
+// var apiType = 'song';
+var list = [];
 
 // shim for AudioContext when it's not avb. 
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -30,13 +31,19 @@ var recording = false;
 // Add events to the record button
 recordButton.addEventListener("click", record);
 
-function changeAPIType(type) {
-    apiType = type;
-    if (apiType === 'song')
-        helperText.innerText = "Cari Lagu";
-    else
-        helperText.innerText = "Sebutkan nomor lagu untuk memainkan lagu";
-}
+var worker = new Worker('/static/filter_worker.js');
+worker.addEventListener('message', function(e) {
+    console.log(e.data);
+    updateSongTable(e.data);
+});
+
+//function changeAPIType(type) {
+//    apiType = type;
+//    if (apiType === 'song')
+//        helperText.innerText = "Cari Lagu";
+//    else
+//        helperText.innerText = "Sebutkan nomor lagu untuk memainkan lagu";
+//}
 
 function record() {
     if (!recording)
@@ -178,129 +185,71 @@ function recognizeSound(blob, encoding){
                 input.value = data.keyword || '';
                 filterSong();
             }
-            if (data.number)
-                playSongNumber(data.number);
+            //if (data.number)
+            //    playSongNumber(data.number);
         });
     };      
     // trigger the read from the reader...
     reader.readAsDataURL(blob);
 }
 
-/*
-function search() {
-    var keyword = searchKeyword.value;
-    var fd = new FormData();
-    fd.append('keyword', keyword);
-    $.ajax({
-        type: 'POST',
-        url: '/api/search-keyword',
-        data: fd,
-        processData: false,
-        contentType: false,
-    }).done(function(data) {
-        console.log(data);
-        if (data.results)
-            updateSearchResult(data.results);
-    });
-}
-*/
-
-async function filterSong() {
+function filterSong() {
     input = document.getElementById('searchKeyword');
     filter = input.value.toLowerCase();
-    table = document.getElementById('songTable');
-    trList = table.getElementsByTagName('tr');
     counter = 1;
     if (filter === '') {
-        changeAPIType('song');
+        //changeAPIType('song');
         songListTitle.innerText = "Daftar Judul Lagu";
     } else {
         songListTitle.innerText = "Hasil Pencarian Lagu";
-        changeAPIType('number');
+        //changeAPIType('number');
     }
+    data = {'keyword': filter, 'list': list};
+    worker.postMessage(data);
 
-    for (var index = 0; index < trList.length; index++) {
-        tdNode = trList[index].getElementsByTagName('td')[1];
-        if (tdNode) {
-            songName = tdNode.textContent || tdNode.innerText;
-            if (songName.toLowerCase().indexOf(filter) > -1) {
-                trList[index].style.display = '';
-                trList[index].getElementsByTagName('td')[0].innerText = counter;
-                if (counter % 2 == 0)
-                    trList[index].style.backgroundColor = '#F0F8FF';
-                else
-                    trList[index].style.backgroundColor = '#FFFFFF';
-                counter++;
-            } else {
-                trList[index].style.display = 'none';
-                trList[index].getElementsByTagName('td')[0].innerText = -1;
-            }
-        }
-    }
+
+//    for (var index = 0; index < trList.length; index++) {
+//        tdNode = trList[index].getElementsByTagName('td')[1];
+//        if (tdNode) {
+//            songName = tdNode.textContent || tdNode.innerText;
+//            if (songName.toLowerCase().indexOf(filter) > -1) {
+//                trList[index].style.display = '';
+//                trList[index].getElementsByTagName('td')[0].innerText = counter;
+//                if (counter % 2 == 0)
+//                    trList[index].style.backgroundColor = '#F0F8FF';
+//                else
+//                    trList[index].style.backgroundColor = '#FFFFFF';
+//                counter++;
+//            } else {
+//                trList[index].style.display = 'none';
+//                trList[index].getElementsByTagName('td')[0].innerText = -1;
+//            }
+//        }
+//    }
 }
 
-/*
-function updateSearchResult(results) {
-    songListNode = document.getElementById('song-list-body');
-    trList = songListNode.getElementsByTagName('tr');
+function updateSongTable(indexList) {
+    indexSet = new Set(indexList);
+    table = document.getElementById('songTable');
+    tbody = table.getElementsByTagName('tbody')[0];
+    trList = tbody.getElementsByTagName('tr');
+
     counter = 1;
     for (var index = 0; index < trList.length; index++) {
-        if (results.includes(trList[index].getElementsByTagName('td')[1].innerText)) {
-            trList[index].style.display = "block";
+        if (indexSet.has(index)) {
+            trList[index].style.display = '';
             trList[index].getElementsByTagName('td')[0].innerText = counter;
             if (counter % 2 == 0)
-                trList[index].style.backgroundColor = "#F0F8FF";
+                trList[index].style.backgroundColor = '#F0F8FF';
             else
-                trList[index].style.backgroundColor = "#FFFFFF";
+                trList[index].style.backgroundColor = '#FFFFFF';
             counter++;
         } else {
-            trList[index].style.display = "none";
+            trList[index].style.display = 'none';
             trList[index].getElementsByTagName('td')[0].innerText = -1;
         }
     }
 }
-*/
-
-/*
-function updateSearchResult(results) {
-    index = 1;
-    searchListNode = document.getElementById('search-list-body');
-    // Removing the old search results
-    if (results.length == 0)
-        return
-    while (searchListNode.firstChild) {
-        searchListNode.removeChild(searchListNode.firstChild);
-    }
-    for (var result in results) {
-        // index element
-        indexTdNode = document.createElement('td');
-        indexNode = document.createTextNode(index);
-        indexTdNode.appendChild(indexNode);
-
-        // song element
-        resultTdNode = document.createElement('td');
-        resultNode = document.createTextNode(results[index-1]);
-        resultTdNode.appendChild(resultNode);
-
-        // wrap in tr element
-        trNode = document.createElement('tr');
-        trNode.appendChild(indexTdNode);
-        trNode.appendChild(resultTdNode);
-
-        searchListNode.appendChild(trNode);
-
-        ++index;
-    }
-    if (results.length == 1) {
-        // play the song
-        playSong(results[0]);
-        apiType = 'song';
-    } else {
-        apiType = 'number';
-    }
-
-}
-*/
 
 function playSongNumber(number) {
     filterSong();
@@ -321,4 +270,12 @@ $(document).keypress(function(e) {
     if(e.which == 13) {
         record();
     }
+});
+
+$.ajax({
+    url: '/api/songs',
+    type: 'GET',
+}).done(function(data) {
+    list = data.songs;
+    init();
 });

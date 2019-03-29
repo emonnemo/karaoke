@@ -242,10 +242,3 @@ progressDiv.addEventListener("click", function (e) {
     progress(e);
 });
 
-$.ajax({
-    url: '/api/songs',
-    type: 'GET',
-}).done(function(data) {
-    list = data.songs;
-    init();
-});
